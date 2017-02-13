@@ -56,4 +56,4 @@ if __name__ == '__main__':
     if crypttype == '1':
         print aes.encrypt(hashstr)
     elif crypttype == '2':
-        print aes.decrypt(hashstr).decode('utf-8')
+        print aes.decrypt(hashstr)

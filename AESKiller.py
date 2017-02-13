@@ -192,7 +192,9 @@ class AES_KillerTab(IMessageEditorTab):
         shell_str = "%s %s %s %s %s %s" % (self._extender._jTextFieldPythonPath.getText().strip(),
                                            self._extender._jTextFieldScriptPath.getText().strip(),str(key),
                                            self._extender._jTextFieldIV.getText().strip(),str(crypttype),hashstr)
+        print shell_str
         p = subprocess.Popen(shell_str,  stdout = subprocess.PIPE, stdin = subprocess.PIPE, stderr=subprocess.PIPE,shell = True)
+
         while p.poll() == None:
             time.sleep(0.01)
         result = p.stdout.read().strip()
@@ -254,6 +256,7 @@ class AES_KillerTab(IMessageEditorTab):
         if self._txtInput.isTextModified():
             
             pre_data = self._txtInput.getText().tostring()
+            data = ""
             #print "start en"
             sign = 0
             try:

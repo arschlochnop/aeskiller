@@ -12,3 +12,4 @@ AES Mode: 当时是给多种加密方式占的输入坑，现在没用到<br>
 Parameters: 这是加解密的提取参数名，只对指定的参数(支持多个参数)进行解密，格式：data|cryptdata|ret<br>
 Pyhton path:Python 路径<br>
 Script  path: 加解密脚本路径<br>
+ ![image](https://github.com/arschlochnop/aeskiller/blob/master/screenshots/video.gif)
